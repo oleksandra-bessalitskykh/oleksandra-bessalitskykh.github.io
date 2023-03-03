@@ -1,9 +1,9 @@
 import { albumsActions } from './albums-slice';
 
-export const fetchAlbumsData = () => {
+export const fetchUserAlbums = (id) => {
     return async (dispatch) => {
         const fetchData = async () => {
-            const response = await fetch('https://jsonplaceholder.typicode.com/albums');
+            const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}/albums`);
 
             if (!response.ok) {
                 throw new Error('Could not fetch user albums!');

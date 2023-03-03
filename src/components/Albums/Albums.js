@@ -3,9 +3,8 @@ import { useSelector } from 'react-redux';
 import Album from './components/Album/Album';
 import classes from './Albums.module.css';
 
-
 const Albums = ({onClose}) => {
-    const albums = useSelector((state) => state.albums.albums);
+    const albums = useSelector((state) => state.albums.items);
 
     return (
         <div className={classes.albums}>

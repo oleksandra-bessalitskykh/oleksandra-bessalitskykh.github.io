@@ -10,10 +10,6 @@ const postsSlice = createSlice({
         replacePosts(state, action) {
             state.items = action.payload.items;
         },
-        findUserPost(state, action) {
-            const id = action.payload;
-            state.posts = state.items.filter(item => item.userId === id);
-        },
     },
 });
 

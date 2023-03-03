@@ -3,8 +3,8 @@ import { useDispatch } from 'react-redux';
 
 import Card from '../../../UI/Card/Card';
 import Albums from '../../../Albums/Albums';
-import { postActions } from '../../../../store/posts-slice';
-import { albumsActions } from '../../../../store/albums-slice';
+import { fetchUserPosts } from '../../../../store/posts-actions';
+import { fetchUserAlbums } from '../../../../store/albums-actions';
 import { uiActions } from '../../../../store/ui-slice';
 
 import classes from './ListItem.module.css';
@@ -14,13 +14,13 @@ const ListItem = ({name, id}) => {
     const [isAlbumsVisible, setIsAlbumsVisible] = useState(false);
 
     const showUserPosts = () => {
-        dispatch(postActions.findUserPost(id));
+        dispatch(fetchUserPosts(id));
         dispatch(uiActions.toggle());
         setIsAlbumsVisible(false);
     };
 
     const showUserAlbums = () => {
-        dispatch(albumsActions.findUserAlbums(id));
+        dispatch(fetchUserAlbums(id));
         setIsAlbumsVisible(isAlbumsVisible => !isAlbumsVisible);
     };
 

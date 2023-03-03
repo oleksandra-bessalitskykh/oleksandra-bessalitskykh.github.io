@@ -6,10 +6,9 @@ import { uiActions } from '../../store/ui-slice';
 
 import classes from './Posts.module.css';
 
-
 const Posts = () => {
     const dispatch = useDispatch();
-    const posts = useSelector((state) => state.posts.posts);
+    const posts = useSelector(state => state.posts.items);
 
     const onClose = () => {
         dispatch(uiActions.toggle());

@@ -1,7 +1,7 @@
 import classes from './Post.module.css';
 
 const Post = (props) => {
-    const { title, body, id } = props.item;
+    const {title, body, id} = props.item;
     const postTitle = `${id}. ${title}`;
 
     return (

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import ListItem from './components/ListItem/ListItem';
 import classes from './UsersList.module.css';
 
-const UsersList = (props) => {
+const UsersList = () => {
     const users = useSelector((state) => state.users.items);
 
     return (

@@ -1,16 +1,17 @@
 import { Fragment, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import Layout from './components/Layout/Layout';
 import UsersList from './components/UsersList/UsersList';
-import Posts from './components/Posts/Posts';
 
 import { fetchUsersData } from './store/users-actions';
 import { fetchPostsData } from './store/posts-actions';
 import { fetchAlbumsData } from './store/albums-actions';
+import Posts from "./components/Posts/Posts";
 
 function App() {
     const dispatch = useDispatch();
+    const isPostsVisible = useSelector((state) => state.ui.postsIsVisible);
 
     useEffect(() => {
         dispatch(fetchUsersData());
@@ -21,7 +22,8 @@ function App() {
     return (
         <Fragment>
             <Layout>
-                <UsersList/>
+                {!isPostsVisible && <UsersList/>}
+                {isPostsVisible && <Posts/>}
             </Layout>
         </Fragment>
     );

@@ -20,6 +20,7 @@ export const fetchUsersData = () => {
             dispatch(usersActions.replaceUsers({
                 items: usersData || []
             }))
-        } catch (error) {}
+        } catch (error) {
+        }
     }
 };

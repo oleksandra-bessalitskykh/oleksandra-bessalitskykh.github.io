@@ -19,6 +19,7 @@ export const fetchPostsData = () => {
             dispatch(postActions.replacePosts({
                 items: postsData || [],
             }));
-        } catch (error) {}
+        } catch (error) {
+        }
     }
 };

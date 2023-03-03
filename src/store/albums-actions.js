@@ -19,6 +19,7 @@ export const fetchAlbumsData = () => {
             dispatch(albumsActions.replaceAlbums({
                 items: albumsData || [],
             }));
-        } catch (error) {}
+        } catch (error) {
+        }
     }
 };

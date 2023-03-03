@@ -4,7 +4,6 @@ const postsSlice = createSlice({
     name: 'posts',
     initialState: {
         items: [],
-        posts: [],
     },
     reducers: {
         replacePosts(state, action) {

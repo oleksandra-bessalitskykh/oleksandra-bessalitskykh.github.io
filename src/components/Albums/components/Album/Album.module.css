@@ -1,0 +1,10 @@
+.item {
+  margin: 1rem 0;
+  background-color: #575757;
+  padding: 1rem;
+}
+
+.item li {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.75rem;
+}

@@ -3,9 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import Layout from './components/Layout/Layout';
 import UsersList from './components/UsersList/UsersList';
-
-import { fetchUsersData } from './store/users-actions';
 import Posts from './components/Posts/Posts';
+import { fetchUsersData } from './store/users-actions';
 
 function App() {
     const dispatch = useDispatch();
